@@ -1,0 +1,176 @@
+<html>
+<head>
+    <title>my project</title>
+</head>
+<style>
+body{
+background-color : skyblue;
+}
+
+nav{
+background-color :#142b47;
+overflow : auto;
+}
+
+ul{
+}
+
+ul li{
+float : left;
+list-style : none;
+}
+
+ul li a {
+text-decoration : none;
+width : 130px;
+display: block;
+text-align : center;
+color : #f2f2f2;
+font-size:18px;
+font-family : sans-serif;
+
+}
+
+.nav-bar{
+float : right;
+}
+.nav-bar input{
+font-size:16px;
+font-family : sans-serif;
+}
+
+.nav-bar button{
+background : orange;
+color : white;
+font-size:16px;
+border-radius: 0 5px 5px 0;
+}
+
+{
+h1 color : red;
+background-color : yellow;
+text-align : center
+}
+.first{
+background : rgb(0,200,0);
+}
+
+.weather{
+text-align : center;
+}
+.weather input{
+font-size:16px;
+font-family : sans-serif;
+}
+
+.container{
+max-width :30%;
+font-size:40px;
+line-height :30px;
+height : auto;
+border: 2px solid skyblue;
+margin: 20px auto;
+box-sizing: border-box;
+border-radius: 20px
+}
+
+
+.container1{
+float : left;
+max-width :40%;
+font-size:20px;
+line-height :50px;
+height :auto;
+border: 2px solid skyblue;
+margin: 50px auto;
+box-sizing: border-box;
+border-radius: 20px
+}
+
+.container2{
+
+float : right;
+max-width :60%;
+font-size:20px;
+line-height :50px;
+height :auto;border: 2px solid skyblue;
+margin: 50px auto;
+box-sizing: border-box;
+border-radius: 20px
+}
+
+.container2 a{
+text-decoration : none;
+}
+
+.container h4{
+color : red;
+font-size :18px;
+}
+
+.first h1{
+color : white;
+font-size:56px;
+}
+
+
+
+
+
+</style>
+<body>
+<nav>
+    <ul>
+        <li><a href="">Home </a>
+        <li><a href="admin">Admin </a>
+        <li><a href="weather">Weather </a>
+        <li><a href="#">About </a>
+        <li><a href="#">Contact </a>
+        <li><a href="">Login </a>
+        <li><a href="Registeration">Register </a>
+    </ul>
+
+    <form class="nav-bar">
+        <input type="text" placeholder="search here">
+        <button>Search</button>
+    </form>
+
+</nav>
+<br>
+<br>
+
+<div class="container">
+    {% if messages %}
+            {% for message in messages %}
+                <center><h4>{{message}}</h4></center>
+            {% endfor %}
+        {% endif %}
+            <center> New users register here! </center>
+    <div class="container2">
+        <form method="POST" action="">
+            {% csrf_token %}
+            :{{form.Name}}<br>
+            :{{form.Username}}<br>
+            :{{form.Password1}}<br>
+            :{{form.Password2}}<br>
+            :{{form.DOB}}<br>
+            <br>
+            <button type="submit">Register</button>
+            <a href="Login" >.    > Login ?</a></>
+        </form>
+    </div>
+    <div class="container1">
+        <form>
+            Name <br>
+            username <br>
+            password <br>
+            conform password <br>
+            date of birth <br>
+            <br>
+
+        </form>
+    </div>
+
+</div>
+</body>
+</html>

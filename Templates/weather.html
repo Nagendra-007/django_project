@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>my project</title>
+</head>
+<style>
+body{
+background-color : skyblue;
+}
+
+nav{
+background-color :#142b47;
+overflow : auto;
+}
+
+ul{
+}
+
+ul li{
+float : left;
+list-style : none;
+}
+
+ul li a {
+text-decoration : none;
+width : 130px;
+display: block;
+text-align : center;
+color : #f2f2f2;
+font-size:18px;
+font-family : sans-serif;
+
+}
+
+.nav-bar{
+float : right;
+}
+.nav-bar input{
+font-size:16px;
+font-family : sans-serif;
+}
+
+.nav-bar button{
+background : orange;
+color : white;
+font-size:16px;
+border-radius: 0 5px 5px 0;
+}
+
+{
+h1 color : red;
+background-color : yellow;
+text-align : center
+}
+.first{
+background : rgb(0,200,0);
+}
+
+.weather{
+text-align : center;
+}
+.weather input{
+font-size:16px;
+font-family : sans-serif;
+}
+
+
+
+.first h1{
+color : white;
+font-size:56px;
+}
+</style>
+<body>
+<nav>
+<ul>
+<li><a href="">Home  </a>
+<li><a href="admin">Admin  </a>
+<li><a href="weather">Weather  </a>
+<li><a href="#">About  </a>
+<li><a href="#">Contact  </a>
+<li><a href="#">Login  </a>
+<li><a href="#">Register  </a>
+</ul>
+
+<form class ="nav-bar">
+<input type = "text" placeholder="search here">
+<button>Search</button>
+</form>
+
+</nav>
+<section class ="first">
+
+            <h2> Hello Nagendra...</h2>
+            <h1 class="title">
+                What's the weather like?
+            </h1>
+</section>
+<section class=weather>
+                <form action="weather_info" method="post">{% csrf_token %}
+                    <input type="text" name="city_name" placeholder="Enter city Name">
+                    <input type="submit" style="background:orange">
+
+                </form>
+</section>
+
+</body>
+</html>
